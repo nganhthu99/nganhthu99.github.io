@@ -1,0 +1,73 @@
+body {
+    background-image: url("resource/background.gif");
+}
+
+h1 {
+    color: #A4A400;
+    background-color: #F0F0F0;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial;
+    font-size: 22px;
+    text-align: center;
+}
+
+h3 {
+    color: #A4A400;
+    background-color: #F0F0F0;
+    font-family: "Lucida Sans Unicode", Helvetica, Arial;
+    font-size: 18px;
+    text-align: left;
+}
+
+li, pre, p {
+    color: #404040;
+    font-size: 11px;
+    font-family: Georgia, Garamond;
+}
+
+a {
+    color: #A4A400;
+    font-size: 11px;
+    font-family: Georgia, Garamond;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+}
+
+.copyright {
+    font-family: monospace;
+    text-align: right;
+}
+
+blockquote {
+    color: #404040;
+    font-size: 11px;
+    font-family: Georgia, Garamond;
+    background-color: #FFFFA8;
+    font-style: italic;
+}
+

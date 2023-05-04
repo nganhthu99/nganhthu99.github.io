@@ -1,0 +1,50 @@
+/*body {*/
+/*    font-family: Arial, sans-serif;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+img.cat {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+/*p {*/
+/*    text-align: justify;*/
+/*    max-width: 600px;*/
+/*    margin: 0 auto;*/
+/*    padding: 10px;*/
+/*    line-height: 1.5;*/
+/*}*/
+
+hr.solid {
+    border-top: 3px solid #bbb;
+}
+
+img.profile {
+    border: 1px solid #000;
+    max-width: 300px;
+    max-height: 400px;
+}
+
+p {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+h1 {
+    color: cornflowerblue;
+    font-family: "Lucida Console", "Courier New", monospace;
+    text-align: center;
+}
+
+h3 {
+    color: cornflowerblue;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+li {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
