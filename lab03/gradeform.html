@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="https://mumstudents.org/params.php" target="_blank">
+        <label for="name">Student name:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="id">Student id:</label><br>
+        <input type="text" id="id" name="id"><br>
+
+        <label for="courses">Choose a course:</label><br>
+        <select id="courses" name="courses">
+            <option value="MPP" selected>MPP</option>
+            <option value="EA">EA</option>
+            <option value="WAP">WAP</option>
+        </select><br>
+
+        <p>Choose your entry:</p>
+        <input type="radio" id="january" name="entry" value="january">
+        <label for="january">January</label><br>
+        <input type="radio" id="april" name="entry" value="april">
+        <label for="april">April</label><br>
+        <input type="radio" id="august" name="entry" value="august">
+        <label for="august">August</label><br>
+        <input type="radio" id="october" name="entry" value="october">
+        <label for="october">October</label><br>
+
+        <input type="checkbox" id="confirm" name="confirm" value="true">
+        <label for="confirm"> Do you want to look up your grade?</label><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <h1>Retrieve your grade</h1>
+    <p>Name: ...</p>
+    <p>Student ID: ...</p>
+    <p>Get Grade!</p>
+</body>
+</html>

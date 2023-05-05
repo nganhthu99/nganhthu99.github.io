@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <form class="container" action="https://mumstudents.org/params.php" target="_blank">
+        <fieldset>
+            <legend>New User Signup:</legend>
+            <label class="lb" for="name">Name:</label>
+            <input class="input_name" type="text" id="name" name="name"><br>
+
+            <label class="lb" for="male">Gender: </label>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br>
+
+            <label class="lb" for="age">Age:</label>
+            <input class="input_age" type="text" id="age" name="age"><br>
+
+            <label class="lb" for="personality">Personality type:</label>
+            <input class="input_personality" type="text" id="personality" name="personality"><br>
+
+            <label class="lb" for="os">Favorite OS:</label>
+            <select class="input_os" id="os" name="os">
+                <option value="Window">Window</option>
+                <option value="Mac">Mac</option>
+                <option value="Linux">Linux</option>
+            </select><br>
+
+            <label class="lb" for="seeking_age_from">Seeking age:</label>
+            <input class="input_age_from" type="text" id="seeking_age_from" name="seeking_age_from">
+            <label for="seeking_age_to">to</label>
+            <input class="input_age_to" type="text" id="seeking_age_to" name="seeking_age_to"><br>
+
+            <input class="button" type="submit" value="Sign up">
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,53 @@
+.container {
+    /*text-align: left;*/
+    /*border-color: #404040;*/
+    /*border-width: 5px;*/
+    /*border-radius: 30px;*/
+    /*background-color: #FFFFA8;*/
+    margin-left: 300px;
+    margin-right: 300px;
+    /*padding: 5px;*/
+}
+
+fieldset {
+    border-radius: 5px;
+    background-color: aliceblue;
+}
+
+legend {
+    background-color: #F0F0F0;
+    border-width: 1px;
+    border-color: #000;
+    border-style: solid;
+}
+
+.lb {
+    float: left;
+    width: 30%
+}
+
+label, input, select {
+    margin-bottom: 5px;
+}
+
+.input_age, .input_age_from, .input_age_to, .input_personality {
+    width: 10%;
+}
+
+.input_os {
+    width: 15%;
+}
+
+.input_name {
+    width: 20%
+}
+
+input, select {
+    border-radius: 0px;
+    border-width: 1px;
+}
+
+.button {
+    background-color: lightpink;
+    font-size: 25px;
+}
