@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function addTask() {
+            let item = document.getElementById('task').value
+            let list = document.getElementById("list");
+
+            let li = document.createElement("li");
+            li.innerText = item;
+            list.appendChild(li);
+
+            let lsList = JSON.parse(localStorage.getItem("list"));
+            if (lsList == null) lsList = []
+            lsList.push(item)
+            localStorage.setItem("list", JSON.stringify(lsList))
+        }
+
+        function load() {
+            let list = document.getElementById("list");
+            let lsList = JSON.parse(localStorage.getItem("list"));
+            if (lsList == null) list = [];
+            lsList.forEach((item) => {
+                let li = document.createElement("li");
+                li.innerText = item;
+                list.appendChild(li);
+            });
+        }
+
+        function clearTask() {
+            let list = document.getElementById("list");
+            list.innerHTML = '';
+            window.localStorage.clear()
+        }
+    </script>
+</head>
+<body onload="load()">
+<div class="container">
+    <h1 class="heading">Task List</h1>
+    <div class="left-container">
+        <label for="task">Task</label><br>
+        <input type="text" id="task" name="task"><br>
+        <button id="add" onclick="addTask();">Add Task</button><br>
+        <button id="clear" onclick="clearTask();">Clear Task</button>
+    </div>
+    <div class="right-container">
+        <label>Task List</label>
+        <ul id="list"></ul>
+    </div>
+</div>
+</body>
+</html>

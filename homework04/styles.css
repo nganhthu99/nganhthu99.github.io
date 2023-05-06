@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    margin: auto;
+    border-style: solid;
+    border-color: blue;
+    border-width: 2px;
+    overflow: auto;
+    max-width: 60%;
+    padding: 30px;
+    padding-top: 10px;
+    height: 300px
+}
+
+.left-container {
+    float: left;
+    width: 40%;
+    height: 70%;
+}
+
+.right-container {
+    float: left;
+    width: 60%;
+    height: 70%;
+}
+
+#list {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    height: 70%;
+    margin: 2px
+}
+
+label, input, button {
+    margin: 2px
+}
+
+button, input {
+    width: 90%;
+}
+
+.heading {
+    color: blue;
+}
