@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="Accounts.js"></script>
+    <script>
+        const accounts = new Accounts();
+
+        function createAccount() {
+            let accountName = document.getElementById("name").value;
+            let balance = parseFloat(document.getElementById("deposit").value);
+            accounts.createAccount(accountName, balance);
+
+            console.log(accounts.accountInfoList.length)
+            clear()
+            reload()
+        }
+
+        function deposit() {
+            let accountName = document.getElementById("dropdown").value;
+            let amount = parseFloat(document.getElementById("depositAmount").value);
+            accounts.deposit(accountName, amount);
+
+            clear()
+            reload()
+        }
+
+        function debit() {
+            let accountName = document.getElementById("dropdown").value;
+            let amount = parseFloat(document.getElementById("debitAmount").value);
+            accounts.debit(accountName, amount);
+
+            clear()
+            reload()
+        }
+
+        function reload() {
+            let select = document.getElementById("dropdown");
+            let ul = document.getElementById("accounts");
+            accounts.accountInfoList.forEach((account) => {
+                let text = "Account name: " + account.accountName + "; Balance: " + account.balance;
+
+                let option = document.createElement("option");
+                option.value = account.accountName;
+                option.innerText = text;
+                select.appendChild(option);
+
+                let li = document.createElement("li");
+                li.innerText = text;
+                ul.appendChild(li);
+            })
+        }
+
+        function clear() {
+            let select = document.getElementById("dropdown");
+            select.innerHTML = ''
+            let ul = document.getElementById("accounts");
+            ul.innerHTML = ''
+        }
+    </script>
+</head>
+<body>
+<div style="max-width: 50%; margin: auto">
+    <label for="name">Account name: </label>
+    <input type="text" id="name" name="name"><br>
+
+    <label for="deposit">Deposit: </label>
+    <input type="text" id="deposit" name="deposit"><br>
+
+    <button id="createBtn" onclick="createAccount();">Create new account</button><br>
+
+    <label for="dropdown">List of accounts: </label>
+    <select id="dropdown" name="dropdown">
+    </select><br>
+
+    <label for="depositAmount">Amount: </label>
+    <input type="text" id="depositAmount" name="depositAmount">
+    <button id="depositBtn" onclick="deposit();">Deposit</button><br>
+
+    <label for="debitAmount">Amount: </label>
+    <input type="text" id="debitAmount" name="debitAmount">
+    <button id="debitBtn" onclick="debit();">Debit</button><br>
+
+    <div style="max-width: 100%; height: 300px; border-style: solid; border-width: 1px">
+        <ul id="accounts"></ul>
+    </div>
+</div>
+</body>
+</html>

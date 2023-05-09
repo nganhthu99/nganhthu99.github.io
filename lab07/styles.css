@@ -1,0 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
+label, input, button, div {
+    margin: 2px
+}
