@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre>
+  1. What is the difference between the following 2 statements?
+setTimeout(booyah, 2000);
+setTimeout(booyah(), 2000);
+Answer:
+-	The first one, function booyah will execute after 2 seconds.
+-	The second one, function booyah will be execute right away. And there will be error log, because setTimeout(…) expects first argument to be a function.
+
+2. What do the following 2 alerts display (answer without running the code)?
+var myfunc = function(a, x) { return a * x; };
+var x = myfunc(2, 3);
+var y = myfunc;
+alert(x);
+alert(y(2,3));
+Answer:
+-	alert(x)  6
+-	alert(y(2, 3))  6
+
+3. Write functions booyah1 and booyah2 so that in both cases below, an alert box comes up after 2 seconds that says “BOOYAH!” setTimeout(booyah1, 2000); setTimeout(booyah2(), 2000);
+Answer:
+-	var booyah1 = function() { alert(“BOOYAH!”); }
+-	var booyah2 = function() { return booya1; }
+
+</pre>
+</body>
+</html>
