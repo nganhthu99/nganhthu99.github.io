@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ASCIImation</title>
+    <script src="jquery/jquery.js"></script>
+    <link rel="stylesheet" href="ascii.css">
+    <script src="animation.js"></script>
+    <script src="ascii.js"></script>
+</head>
+<body>
+<h1 id="header">CSE 190 M ASCII Animation Viewer</h1>
+<textarea id="animationTxtArea" rows="20" cols="80"></textarea>
+<div id="controls">
+    <fieldset>
+        <legend>Play controls</legend>
+        <button id="startBtn">Start</button>
+        <button id="stopBtn">Stop</button>
+    </fieldset>
+    <fieldset>
+        <legend>Animation</legend>
+        <select id="animationSlt" class="control">
+            <option value="Blank">Blank</option>
+            <option value="Exercise">Exercise</option>
+            <option value="Juggler">Juggler</option>
+            <option value="Bike">Bike</option>
+            <option value="Dive">Dive</option>
+            <option value="Custom">Custom</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Size</legend>
+        <select id="sizeSlt" class="control">
+            <option value="7">Tiny</option>
+            <option value="10">Small</option>
+            <option value="12" selected>Medium</option>
+            <option value="16">Large</option>
+            <option value="24">Extra Large</option>
+            <option value="32">XXL</option>
+        </select>
+    </fieldset>
+    <fieldset>
+        <legend>Speed</legend>
+        <label>
+            <input id="turboIpt" type="checkbox" value="turbo" class="control">
+            Turbo
+        </label>
+    </fieldset>
+</div>
+</body>
+</html>
