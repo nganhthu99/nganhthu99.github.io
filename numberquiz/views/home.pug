@@ -1,0 +1,14 @@
+extends layout
+
+block content
+    h1= title
+    div
+        p Your current score is #{score}
+        p Guess the next number in the sequence.
+        p #{question}
+        form(action='' method='post')
+            label(for='answer') Your answer:
+            input#answer(type='number' name='answer')
+            br
+            br
+            button(type='submit') Submit

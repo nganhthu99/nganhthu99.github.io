@@ -1,0 +1,53 @@
+p {
+
+}
+
+.class_p {
+
+}
+
+p.class_p {
+
+}
+
+* {
+
+}
+
+.another_class_p {
+
+}
+
+p, .class_p, .another_class_p {
+
+}
+
+body {
+    background-color: rgba(0, 128, 0, 0.1);
+    background-image: url("../resource/homework01/background.gif");
+    /*opacity: 0.1;*/
+    background-position: right top;
+    background-attachment: fixed;
+}
+
+p {
+    background-color: aliceblue;
+}
+
+p {
+    border-style: dashed;
+    border-width: 2px;
+    border-color: darkred;
+    border-top-color: blueviolet;
+    border-radius: 5px;
+}
+
+p {
+    margin: auto;
+}
+
+p {
+    padding: 20px;
+    box-sizing: border-box;
+    max-width: 50%;
+}

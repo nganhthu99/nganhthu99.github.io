@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            // jQuery methods go here...
+            $("#btn1").click(() => {
+                $("#p1").hide(1000)
+            })
+
+            $("#btn2").click(() => {
+                $("#p1").show(1000)
+            })
+
+            $("#btn3").click(() => {
+                $("#p1").toggle(1000, () => alert("Finish toggle!"))
+            })
+
+            $("#btn4").click(() => {
+                $("#p1").animate(
+                    {
+                        left: "250px",
+                        opacity: 0.1,
+                        fontSize: "50px"
+                    },
+                    1000
+                );
+                $("#p1").animate(
+                    {
+                        left: "100px",
+                        opacity: 0.9,
+                        fontSize: "100px"
+                    },
+                    1000
+                )
+            })
+
+            $("#btn6").click(() => {
+                $("#p1").animate(
+                    {
+                        left: "250px",
+                        opacity: 0.1,
+                        fontSize: "50px"
+                    },
+                    1000
+                ).animate(
+                    {
+                        left: "100px",
+                        opacity: 0.9,
+                        fontSize: "100px"
+                    },
+                    1000
+                )
+            })
+
+            $("#btn5").click(() => {
+                $("#p1").stop()
+            })
+
+            $("#p1").on({
+                mouseenter: function () {
+                    $(this).css("color", "red")
+                },
+                mouseleave: function () {
+                    $(this).css("color", "blue")
+                }
+            })
+
+            $("#btn7").click(() => {
+                alert($("#p1").text())
+            })
+
+            $("#btn8").click(() => {
+                $("#p1").text(function (i, old) {
+                    return "Old: " + old + "; New: " + "Hi";
+                })
+            })
+
+            $("#btn9").click(() => {
+                let p = $("<p id=\"goodnight\"></p>").text("Good night.");
+                $("body").append(p)
+            })
+
+            $("#btn10").click(() => {
+                let p = $("<p id=\"goodmorning\"></p>").text("Good morning.");
+                $("#p1").after(p)
+            })
+
+            $("#btn11").click(() => {
+                $("#goodnight").remove()
+                $("p").remove("#goodmorning")
+            })
+
+            $("#btn12").click(() => {
+                $("#p1").css({"color": "red", "background-color": "yellow"})
+            })
+        });
+    </script>
+</head>
+<body>
+<p id="p1">Hello</p>
+<button id="btn1">Disappear</button>
+<button id="btn2">Appear</button>
+<button id="btn3">Toggle</button>
+<button id="btn4">Animate</button>
+<button id="btn5">Stop</button>
+<button id="btn6">Chaining animation</button>
+<button id="btn7">Get</button>
+<button id="btn8">Set</button>
+<button id="btn9">Create and Append content</button>
+<button id="btn10">Create and Add element</button>
+<button id="btn11">Remove</button>
+<button id="btn12">CSS</button>
+
+</body>
+</html>
