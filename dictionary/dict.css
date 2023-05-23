@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0
+}
+
+#heading {
+    background-color: darkgray;
+    padding: 10pt
+}
+
+#form {
+    background-color: lightgray;
+    padding: 10pt
+}
+
+#definitionList {
+    padding: 10pt
+}
+
+.definitionItem {
+    padding: 5pt
+}
+
+#loader {
+    height: 50pt;
+    width: 50pt;
+}
+
+#loaderContainer {
+    text-align: center;
+    padding: 5pt;
+}
